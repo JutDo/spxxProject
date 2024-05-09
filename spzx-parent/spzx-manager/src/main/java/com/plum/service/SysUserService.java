@@ -13,5 +13,8 @@ import com.plum.spzx.model.vo.system.LoginVo;
  * Version 1.0
  */
 public interface SysUserService {
-    public abstract LoginVo login(LoginDto loginDto) ;
+    LoginVo login(LoginDto loginDto) ;
+    String getUserInfo(String token);
+
+    void logout(String token);
 }

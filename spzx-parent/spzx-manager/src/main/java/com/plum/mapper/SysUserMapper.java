@@ -15,4 +15,5 @@ import org.apache.ibatis.annotations.Mapper;
 public interface SysUserMapper {
 
     SysUser selectByUserName(String name);
+    String getUserInfo(String token);
 }

@@ -11,4 +11,10 @@
         select <include refid="columns" /> from sys_user where username = #{userName} and is_deleted = 0
     </select>
 
+    <select id="getUserInfo" resultType="com.plum.spzx.model.entity.system.SysUser">
+        select <include refid="columns" /> from sys_user where username = #{userName} and is_deleted = 0
+    </select>
+
+
+
 </mapper>
