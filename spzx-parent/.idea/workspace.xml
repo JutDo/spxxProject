@@ -4,24 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e5e4eba-89b1-4ee3-a18a-52b2410904ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/spzx-common/spzx-service/src/main/java/com/plum/config/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-common/spzx-service/src/main/java/com/plum/config/GuiguException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-common/spzx-util/src/main/java/com/plum/config/AuthContextUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-common/spzx-util/src/main/java/com/plum/config/WebMvcConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-common/spzx-util/src/test/java/com/plum/Text.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/config/WebMvcConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/filter/LoginAuthInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/service/ValidateCodeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/service/impl/ValidateCodeServiceImpl.java" afterDir="false" />
+    <list default="true" id="7e5e4eba-89b1-4ee3-a18a-52b2410904ad" name="Changes" comment="添加登录验证接口">
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/controller/SysRoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/mapper/SysRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/properties/UserAuthProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/service/SysRoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/service/impl/SysRoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/resources/application-dev.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/user/SysRoleMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-common/spzx-service/src/test/java/com/plum/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/ManagerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/ManagerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/config/WebMvcConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/mapper/SysUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/mapper/SysUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/service/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/service/SysUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/user/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/resources/mapper/user/SysUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spzx-manager/src/test/java/com/plum/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/filter/LoginAuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/filter/LoginAuthInterceptor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +26,27 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "JutDo"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ddfe3f6c-fbed-4552-8800-ce4be7b1979d" />
+        <option name="url" value="https://github.com/JutDo/spxxProject.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -77,7 +86,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/code/spzxCode/spxxProject/spzx-parent/spzx-common/spzx-util",
+    "last_opened_file_path": "E:/code/spzxCode/spxxProject/spzx-parent/spzx-manager/src/main/resources/mapper/user",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,11 +110,11 @@
       <recent name="com.plum.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\code\spzxCode\spxxProject\spzx-parent\spzx-common\spzx-util" />
+      <recent name="E:\code\spzxCode\spxxProject\spzx-parent\spzx-manager\src\main\resources\mapper\user" />
       <recent name="E:\code\spzxCode\spxxProject\spzx-parent\spzx-manager\src\main\resources" />
+      <recent name="E:\code\spzxCode\spxxProject\spzx-parent\spzx-common\spzx-util" />
       <recent name="E:\code\spzxCode\spxxProject\spzx-parent" />
       <recent name="E:\code\spzxCode\spxxProject\spzx-parent\spzx-common\spzx-service" />
-      <recent name="E:\code\spzxCode\spxxProject\spzx-parent\spzx-model\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\code\spzxCode\spxxProject\spzx-parent\spzx-model\src\main" />
@@ -230,7 +239,17 @@
       <workItem from="1715097141089" duration="1611000" />
       <workItem from="1715127397886" duration="6999000" />
       <workItem from="1715177664047" duration="2371000" />
+      <workItem from="1715264134508" duration="3904000" />
     </task>
+    <task id="LOCAL-00001" summary="添加登录验证接口">
+      <option name="closed" value="true" />
+      <created>1715264220543</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715264220543</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +266,11 @@
         <entry key="7a7e6297-bf2c-4e00-9e5e-872ff4757824">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -279,14 +303,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add the project structrue" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="添加登录验证接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加登录验证接口" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/spzx-manager/src/main/java/com/plum/ManagerApplication.java</url>
-          <line>11</line>
+          <line>14</line>
           <properties class="com.plum.ManagerApplication" method="main">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

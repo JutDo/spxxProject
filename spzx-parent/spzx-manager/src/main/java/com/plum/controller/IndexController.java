@@ -1,6 +1,7 @@
 package com.plum.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.plum.config.AuthContextUtil;
 import com.plum.service.SysUserService;
 import com.plum.service.ValidateCodeService;
 import com.plum.spzx.model.dto.system.LoginDto;
@@ -55,5 +56,8 @@ public class IndexController {
 
         return Result.build("nihaop",ResultCodeEnum.SUCCESS);
     }
-
+    @GetMapping(value = "getUserInfo")
+    public Result<SysUser> getUserInfo() {
+        return Result.build(AuthContextUtil.get(), ResultCodeEnum.SUCCESS);
+    }
 }

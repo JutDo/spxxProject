@@ -5,13 +5,18 @@ import com.alibaba.fastjson2.JSON;
 import com.github.pagehelper.util.StringUtil;
 import com.plum.config.AuthContextUtil;
 import com.plum.spzx.model.entity.system.SysUser;
+import com.plum.spzx.model.vo.common.Result;
+import com.plum.spzx.model.vo.common.ResultCodeEnum;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.concurrent.TimeUnit;
 
 
@@ -24,6 +29,7 @@ import java.util.concurrent.TimeUnit;
  * Version 1.0
  */
 @Component
+@Slf4j
 public class LoginAuthInterceptor implements HandlerInterceptor {
 
     @Resource
@@ -60,5 +66,25 @@ public class LoginAuthInterceptor implements HandlerInterceptor {
     }
 
     private void responseNologInfo(HttpServletResponse response) {
+        Result<Object> result = Result.build(null, ResultCodeEnum.LOGIN_AUTH);
+        PrintWriter writer = null;
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=utf-8");
+        try {
+            writer = response.getWriter();
+            writer.println(JSON.toJSONString(result));
+            log.info(JSON.toJSONString(result));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (writer !=null) {
+                writer.close();
+            }
+        }
+    }
+
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+        AuthContextUtil.remove(); // 移除threadLocal中的用户数据
     }
 }
