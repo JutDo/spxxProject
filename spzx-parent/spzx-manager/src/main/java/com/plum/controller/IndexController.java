@@ -45,16 +45,10 @@ public class IndexController {
         return Result.build(sysUser , ResultCodeEnum.SUCCESS) ;
     }
 
-
     @GetMapping(value = "/logout")
     public Result logout(@RequestHeader(value = "token") String token) {
         sysUserService.logout(token) ;
         return Result.build(null , ResultCodeEnum.SUCCESS) ;
-    }
-    @GetMapping(value = "/text")
-    public Result<LoginVo> login() {
-
-        return Result.build("nihaop",ResultCodeEnum.SUCCESS);
     }
     @GetMapping(value = "getUserInfo")
     public Result<SysUser> getUserInfo() {
